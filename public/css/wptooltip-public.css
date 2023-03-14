@@ -1,0 +1,65 @@
+.wpts-tooltip-box {
+    position: relative;
+    z-index: 999;
+}
+.wpts-tooltip-box-wrap {
+    position: absolute;
+    right: 0;
+    background: #ccc;
+    bottom: 100%;
+    width: 200px;
+    color: #000;
+    padding: 15px;
+    font-size: 12px;
+    opacity: 0;
+    left: -99999px;
+    margin: 0 auto;
+    transition: opacity 0.8s;
+    border-radius: 4px;
+}
+.wpts-tooltip-box:hover .wpts-tooltip-box-wrap {
+    opacity: 1;
+    left: 0;
+}
+.wpts-tooltip-box.wpts-left:hover .wpts-tooltip-box-wrap{
+    top: 0;
+    bottom: inherit;
+    right: 100%;
+    left: unset;
+}
+.wpts-tooltip-box.wpts-right:hover .wpts-tooltip-box-wrap{
+    top: 0;
+    bottom: inherit;
+    right: unset;
+    left: 100%;
+}
+.wpts-tooltip-box.wpts-bottom:hover .wpts-tooltip-box-wrap{
+    top: 100%;
+    bottom: unset;
+}
+.wpts-tooltip-title {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+}
+.wpts-tooltip-content {
+    display: block;
+    margin: 10px 0;
+}
+.wpts-tooltip-box-wrap a {
+    color: #000;
+    display: inline-block;
+}
+.wpts-tooltip-sim-content:not(.hide):after {
+    content: "?";
+    background: #ccc;
+    font-size: 50%;
+    padding: 2px 5px;
+    display: inline-block;
+    vertical-align: text-top;
+    margin: 0 2px;
+    border-radius: 10px;
+}
+.wpts-tooltip-image {
+    margin-bottom: 10px;
+}
